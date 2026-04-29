@@ -43,6 +43,8 @@ def generate_gbif_dwca_from_phylesystem(study_id,
     for otu_id in otu_dict:
         for subkey in otu_dict[otu_id].keys():
             all_otu_keys.append(subkey)
+        otu_dict[otu_id]["dynamicProperties"] = []
+        otu_dict[otu_id]["phyloTreeFileName"] = []
     all_otu_keys =  set(all_otu_keys)
     for tree_id in trees:
         tree_reference = str(study_id)+"_"+str(tree_id)
@@ -55,9 +57,10 @@ def generate_gbif_dwca_from_phylesystem(study_id,
             tn = leaf.taxon
             otu_id = original_label_to_otu[tn.label]
             otu_dict[otu_id]["phyloTreeTipLabel"] = otu_dict[otu_id].get('^ot:originalLabel',"")
+            otu_dict[otu_id]["phyloTreeFileName"].append(phylo_treefile_name)
             otu_dict[otu_id]["scientificName"] = otu_dict[otu_id].get('^ot:ottTaxonName',"")
-            otu_dict[otu_id]["phyloTreeFileName"] = phylo_treefile_name
-    header = ["scientificName","phyloTreeTipLabel","phyloTreeFileName"] + list(all_otu_keys)
+            otu_dict[otu_id]["dynamicProperties"].append({"phyloTreeTipLabel":otu_dict[otu_id].get('^ot:originalLabel',""),"phyloTreeFileName":phylo_treefile_name}) 
+    header = ["scientificName","phyloTreeTipLabel","phyloTreeFileName","dynamicProperties"] + list(all_otu_keys)
 
     with open(study_id+"occurrence.csv", "w") as file:
         writer = csv.writer(file)
