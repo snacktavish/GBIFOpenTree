@@ -63,7 +63,7 @@ def generate_gbif_dwca_from_phylesystem(study_id,
         writer = csv.writer(file)
         writer.writerow(header)
         for otu in otu_dict:
-            data = [otu_dict[otu].get(value, "-") for value in header]
+            data = [otu_dict[otu].get(value, "") for value in header]
             writer.writerow(data)
 
 
