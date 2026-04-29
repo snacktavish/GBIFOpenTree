@@ -1,0 +1,65 @@
+#NEXUS
+
+BEGIN TAXA;
+    DIMENSIONS NTAX=53;
+    TAXLABELS
+        Nigrohirschioporus_griseofuscus
+        Nigrohirschioporus_keylargoensis
+        Nigrohirschioporus_fissilis
+        Nigrohirschioporus_bulbocystidiatus
+        Nigrohirschioporus_sector
+        Nigrohirschioporus_confertus
+        Nigrohirschioporus_deviatus
+        Nigrohirschioporus_trimiticus
+        Nigrohirschioporus_durus
+        Nigrohirschioporus_wuyiensis
+        Nigrohirschioporus_submiurinus
+        Nigrohirschioporus_sp1
+        Perennihirschioporus_fumosoavellaneus
+        Perennihirschioporus_caymanensis
+        Perennihirschioporus_variabilis
+        Perennihirschioporus_agricola
+        Perennihirschioporus_deadaleus
+        Perennihirschioporus_perennis
+        Perennihirschioporus_sp1
+        Pallidohirschioporus_biformis
+        Pallidohirschioporus_brastagii
+        Pallidohirschioporus_imbricaceus
+        Pallidohirschioporus_versicolor
+        Pallidohirschioporus_polycysitidiatus
+        Pallidohirschioporus_subchartaceus
+        Hirschioporus_sp2
+        '"Hirschioporus fuscoviolaceus"'
+        Hirschioporus_acontextus
+        Hirschioporus_fuscoviolaceus
+        Hirschioporus_floridanus
+        '"Hirschioporus abietinus"'
+        Hirschioporus_abietinus
+        Hirschioporus_pubescens
+        Hirschioporus_beijingensis
+        Hirschioporus_chinensis
+        Hirschioporus_montanus
+        Hirschioporus_sp1
+        Hirschioporus_tianschanicus
+        Trichaptum_longisporum
+        Trichaptum_cystidiolatum
+        Trichaptum_bysssogenum
+        Trichaptum_resacarium
+        Trichaptum_perrottetii
+        Trichaptum_strigosum
+        Nigrofomes_sinomelanoporus
+        Nigrofomes_melanoporus
+        Pseudotrichaptum_laricinum
+        Neoantrodiella_gypsea
+        Neoantrodiella_thujae
+        Podocarpioporus_podocarpi
+        Podocarpioporus_hydnoides
+        Coltricia_perennis
+        Coltricia_dependens
+  ;
+END;
+
+BEGIN TREES;
+    TREE 1 = (((((((((((Nigrohirschioporus_griseofuscus,Nigrohirschioporus_keylargoensis),Nigrohirschioporus_fissilis),(Nigrohirschioporus_bulbocystidiatus,Nigrohirschioporus_sector)),((Nigrohirschioporus_confertus,Nigrohirschioporus_deviatus),Nigrohirschioporus_trimiticus)),((Nigrohirschioporus_durus,(Nigrohirschioporus_wuyiensis,Nigrohirschioporus_submiurinus)),Nigrohirschioporus_sp1)),((((Perennihirschioporus_fumosoavellaneus,Perennihirschioporus_caymanensis),Perennihirschioporus_variabilis),Perennihirschioporus_agricola),((Perennihirschioporus_deadaleus,Perennihirschioporus_perennis),Perennihirschioporus_sp1))),((((((Pallidohirschioporus_biformis,Pallidohirschioporus_brastagii),Pallidohirschioporus_imbricaceus),Pallidohirschioporus_versicolor),Pallidohirschioporus_polycysitidiatus),Pallidohirschioporus_subchartaceus),(Hirschioporus_sp2,(((('"Hirschioporus fuscoviolaceus"',Hirschioporus_acontextus),Hirschioporus_fuscoviolaceus),Hirschioporus_floridanus),('"Hirschioporus abietinus"',((((Hirschioporus_abietinus,Hirschioporus_pubescens),Hirschioporus_beijingensis),Hirschioporus_chinensis),((Hirschioporus_montanus,Hirschioporus_sp1),Hirschioporus_tianschanicus))))))),(((((Trichaptum_longisporum,Trichaptum_cystidiolatum),Trichaptum_bysssogenum),Trichaptum_resacarium),(Trichaptum_perrottetii,Trichaptum_strigosum)),(Nigrofomes_sinomelanoporus,Nigrofomes_melanoporus))),Pseudotrichaptum_laricinum),((Neoantrodiella_gypsea,Neoantrodiella_thujae),(Podocarpioporus_podocarpi,Podocarpioporus_hydnoides))),(Coltricia_perennis,Coltricia_dependens));
+END;
+
